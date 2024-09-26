@@ -1,16 +1,31 @@
-import Box from "./Box";
+import Button from "./Button";
+import Circle from "./Circle";
+import GridLayout from "./GridLayout";
 
 function App() {
   return (
     <div>
-      <Box width="100px" hight="100px" backgroudcolor="red" text="나는"></Box>
-      <Box width="200px" hight="200px" backgroudcolor="green" text="지금"></Box>
-      <Box
-        width="300px"
-        hight="300px"
-        backgroudcolor="orange"
-        text="아프다"
-      ></Box>
+      <GridLayout
+        columnNumber={5}
+        component={
+          <>
+            <Button backgroundColor="Primary" borderRadius="Hard" />
+            <Button backgroundColor="Primary" borderRadius="Smooth" />
+            <Button backgroundColor="Primary" borderRadius="Circle" />
+            <Button backgroundColor="Hover" borderRadius="Hard" />
+            <Button backgroundColor="Hover" borderRadius="Smooth" />
+            <Button backgroundColor="Hover" borderRadius="Circle" />
+            <Button backgroundColor="Deactive" borderRadius="Hard" />
+            <Button backgroundColor="Deactive" borderRadius="Smooth" />
+            <Button backgroundColor="Deactive" borderRadius="Circle" />
+            <Circle backgroundColor="pink" />
+            <Circle backgroundColor="skyblue" />
+            <Circle backgroundColor="yellow" />
+            <Circle backgroundColor="green" />
+            <Circle backgroundColor="blue" />
+          </>
+        }
+      ></GridLayout>
     </div>
   );
 }
